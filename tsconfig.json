@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "jsx": "react-jsx",
+        "module": "esnext",
+        "target": "esnext",
+        "moduleResolution": "node",
+        "allowJs": true,
+        "checkJs": false,
+        "noEmit": true,
+        "isolatedModules": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "strict": false
+    },
+    "include": ["./*", "./**/*"]
+}

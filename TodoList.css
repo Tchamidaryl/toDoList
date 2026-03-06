@@ -1,0 +1,168 @@
+/* Responsive, modern, and visually appealing styles for the To-Do List */
+.todo-app-bg {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f8fafc 0%, #dbeafe 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.todo-list-container {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    padding: 32px 24px;
+    max-width: 420px;
+    width: 100%;
+    margin: 24px auto;
+    transition: box-shadow 0.2s;
+}
+
+.todo-list-container:hover {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+.todo-list-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2563eb;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.todo-input-row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.todo-input-row input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #dbeafe;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.todo-input-row input:focus {
+    border-color: #2563eb;
+}
+
+.todo-input-row button {
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: none;
+    background: #2563eb;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.todo-input-row button:hover {
+    background: #1d4ed8;
+}
+
+.todo-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.todo-list-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.todo-list-item:last-child {
+    border-bottom: none;
+}
+
+.todo-checkbox {
+    accent-color: #2563eb;
+    width: 20px;
+    height: 20px;
+}
+
+.todo-task-text {
+    flex: 1;
+    font-size: 1.1rem;
+    color: #334155;
+    transition: color 0.2s;
+}
+
+.todo-task-text.done {
+    text-decoration: line-through;
+    color: #94a3b8;
+}
+
+.todo-edit-input {
+    flex: 1;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #dbeafe;
+    font-size: 1rem;
+}
+
+.todo-action-btn {
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition:
+        background 0.2s,
+        color 0.2s;
+}
+
+.todo-action-btn.edit {
+    background: #f1f5f9;
+    color: #2563eb;
+}
+
+.todo-action-btn.edit:hover {
+    background: #dbeafe;
+}
+
+.todo-action-btn.save {
+    background: #2563eb;
+    color: #fff;
+}
+
+.todo-action-btn.save:hover {
+    background: #1d4ed8;
+}
+
+.todo-action-btn.delete {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.todo-action-btn.delete:hover {
+    background: #fca5a5;
+}
+
+@media (max-width: 600px) {
+    .todo-list-container {
+        padding: 18px 8px;
+        max-width: 98vw;
+    }
+    .todo-list-title {
+        font-size: 1.3rem;
+    }
+    .todo-input-row input,
+    .todo-input-row button {
+        font-size: 0.95rem;
+        padding: 8px;
+    }
+    .todo-task-text {
+        font-size: 1rem;
+    }
+}
